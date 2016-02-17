@@ -9,7 +9,7 @@ def change_gredy(Coins, Change):
     else:
       total += Change/coin
       Change = -= (Change/coin) * coin
-      
+  print "Total coins used: " + str(total)
 V = [1,5,10]
 C = 28
 change_greedy(V,C)
