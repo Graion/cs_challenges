@@ -20,7 +20,7 @@ change_greedy(V,C)
 # and they are not subsequent in the coins array
 
 def change_subsequent(Coins,change):
-    minCoinsUsed = 100
+    minCoinsUsed = "a"
     while len(Coins) > 0:
         total = 0
         rest = change
@@ -28,8 +28,7 @@ def change_subsequent(Coins,change):
             if rest%coin == 0:
                 total += rest/coin
                 rest = 0
-                if total < min:
-                    min = total
+                minCoinsUsed = min(total,minCoinsUsed)
             else:
                 total += rest/coin
                 rest -= (rest/coin) * coin
